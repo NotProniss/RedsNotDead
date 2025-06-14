@@ -1,0 +1,65 @@
+format = """
+[░▒▓](#ff0000)\
+$time\
+[  ](bg:#ff0000 fg:#000000)\
+[](bg:#a70000 fg:#ff0000)\
+$directory\
+[](fg:#a70000 bg:#ff0000)\
+$git_branch\
+$git_status\
+[](fg:#ff0000 bg:#cc0000)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#cc0000 bg:#990000)\
+[ ](fg:#990000)\
+\n$character"""
+
+[directory]
+style = "fg:#000000 bg:#a70000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#ffffff"
+format = '[[ $symbol $branch ](fg:#ffffff bg:#ff0000)]($style)'
+
+[git_status]
+style = "bg:#ff0000"
+format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#ff0000)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#cc0000"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#cc0000)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#cc0000"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#cc0000)]($style)'
+
+[golang]
+symbol = "ﳑ"
+style = "bg:#cc0000"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#cc0000)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#cc0000"
+format = '[[ $symbol ($version) ](fg:#ffffff bg:#cc0000)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#ff0000"
+format = '[[  $time ](fg:#000000 bg:#ff0000)]($style)'
+

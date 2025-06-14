@@ -1,0 +1,38 @@
+{
+
+
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 50,
+
+//#################### Load Modules ####################
+    "include": ["~/.config/waybar/modules.json"],
+    
+//##################### Left Modules ###################
+    "modules-left": [
+        "clock",
+        "custom/weather"
+//        "hyprland/workspaces"
+    ],
+
+//################### Center Modules ###################
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+//#################### Right Modules ###################
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "temperature",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "tray"
+    ],
+}
